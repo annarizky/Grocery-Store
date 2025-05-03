@@ -4,20 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>grocery store</title>
 </head>
 <body>
-    <nav>
-        <div class="">
-            <img src="Logo.png" alt="">
+    <nav class="flex items-center justify-between px-6 py-2 md:px-20">
+        <div class="logo">
+            <img class="md:block hidden" src="Logo.png" alt="">
+            <img class="md:hidden block" src="logo-2 (1).png" alt="">
         </div>
-        <div>
-            <form action="">
-                <input type="text" placeholder="Search">
-                <button>Search</button>
+
+        <div class="flex space-x-8">
+            <form action="" class="flex items-center space-x-8">
+                <input class="flex-grow border border-gray-200 bg-gray-100 rounded-1-md px-3 py-2 text-sm text-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" type="text" placeholder="Search">
+                <button class="bg-[#3BB77E] flex items-center rounded-r-md px-3 py-2 justify-center"><i data-lucide="search" class="w-5 text-white"></i></button>
             </form>
+
+            <div class="flex items-center space-x-8">
+                <a href="" class="flex items-center space-x-2">
+                    <i data-lucide="heart"></i>
+                    <span class="hidden md:block">Whistlist</span>
+                </a>
+                <a class="flex items-center space-x-1" href="">
+                <i data-lucide="shopping-cart" ></i>
+                <span class="hidden md:block">My Cart</span>
+            </a>
+            <img src="Profile.png" alt="" class="w-8">
+            </div>
         </div>
     </nav>
+    <div class="flex items-center space-x-8 bg-white md:px-20">
+   
+    <a href="" class="flex space-x-2 items-center text-white bg-[#3BB77E] px-4 py-3 ">
+        <i data-lucide="layout-dashboard" class="w-5"></i>
+        <span>Brows All Categoris</span>
+    </a>
+    <a href="" class="flex space-x-2 items-center text-[#3BB77E] px-4 py-3 ">
+        <i data-lucide="house" class="w-5"></i>
+        <span class="hidden md:block">Home</span>
+    </a>
+    <a href="" class="flex space-x-2 items-center text-black px-4 py-3 ">
+        <i data-lucide="flame" class="w-5"></i>
+        <span class="hidden md:block">Hot Deals</span>
+    </a>
+    <a href="" class="flex space-x-2 items-center text-black px-4 py-3 ">
+        <i data-lucide="percent" class="w-5"></i>
+        <span class="hidden md:block">Promotion</span>
+    </a>
+    <a href="" class="flex space-x-2 items-center text-black px-4 py-3 ">
+        <i data-lucide="megaphone" class="w-5"></i>
+        <span class="hidden md:block">New Product</span>
+    </a>
+    </div>
+
+    <script>lucide.createIcons();</script>
 </body>
 </html>
